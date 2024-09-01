@@ -1,5 +1,9 @@
 {
+	"name": "Forge Game Data",
     "scopeName": "source.fgd",
+	"foldingStartMarker": "^\\[$",
+	"foldingStopMarker": "^\\]$",
+	"fileTypes": ["fgd"],
     "patterns" : [
         {
             "name": "comment.line.double-slash.fgd",
@@ -18,7 +22,7 @@
         },
         {
             "name": "keyword.fgd",
-            "match": "\\b(axis|angle|color255|color1|filterclass|material|node_dest|npcclass|origin|pointentityclass|scene|sidelist|sound|sprite|studio|target_destination|target_name_or_class|target_source|vecline|vector|integer|float|choices|[F|f]lags|string)\\b",
+            "match": "\\b(axis|angle|color\\d{0,3}|filterclass|material|node_dest|npcclass|origin|pointentityclass|scene|sidelist|sound|sprite|studio|target_destination|target_name_or_class|target_source|vecline|vector|integer|float|choices|[F|f]lags|string)\\b",
             "comment": "FGD Keyword"
         },
         {
@@ -44,7 +48,7 @@
         },
         {
             "name": "entity.name.class.fgd",
-            "match": "\\@(BaseClass|PointClass|NPCClass|SolidClass|KeyFrameClass|MoveClass|FilterClass)",
+            "match": "^\\@.+Class\\b",
             "comment": "Entity Class Type"
         },
         {
